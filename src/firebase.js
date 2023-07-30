@@ -1,17 +1,25 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+// import dotenv from "dotenv"
+// import path from "path"
+// const __dirname = path.resolve()
+// dotenv.config({ path: path.join(__dirname, './.env') })
+// dotenv.config({ path: path.join(__dirname, '.env') });
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDRGGwvkgTDZo5M58qmP9I8PkZ0VRABiGg",
-  authDomain: "chatappnitesh01487.firebaseapp.com",
-  projectId: "chatappnitesh01487",
-  storageBucket: "chatappnitesh01487.appspot.com",
-  messagingSenderId: "561255329195",
-  appId: "1:561255329195:web:b45c9b44a03d6b38d836ee"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGE_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
+
+// console.log(process.env)
+// console.log(process.env.REACT_APP_API_KEY)
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
